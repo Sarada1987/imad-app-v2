@@ -14,6 +14,6 @@ button.onclick = function (){
             }
         }
     };
-  request.open('GET', '',true)
+  request.open('GET', 'http://sarada1987.imad.hasura-app.io/counter',true)
   request.send(null);
 };
