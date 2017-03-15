@@ -104,7 +104,7 @@ app.get('/counter', function(req,res){
 
 function hash(input){
     // How do we create a hash?
-    var hased = crypto.pbkdf25sync(input, salt, 10000, 512, 'sha512');
+    var hased = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
     return hashed.toString('hex');
     
 }
