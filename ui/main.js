@@ -6,7 +6,6 @@ var submit = document.getElementById('submit_btn')
 submit.onclick = function() {
     //make a request to the server and send the name
     var request = new XMLHttpRequest();
-    
     // Capture the response and store it in a variable
     request.onreadystatechange = function(){
         if(request.readyState === XMLHttpRequest.DONE){
@@ -14,6 +13,7 @@ submit.onclick = function() {
                 //capture a list of names and render it as a list
                 console.log('user logged in');
                 alert('Logged in successfully');
+            }
             } else if(request.status === 403){
                 alert('Username/password is incorrect');
                 
@@ -21,7 +21,6 @@ submit.onclick = function() {
                 alert('Something went wrong on the server')
             }
 
-        }
     };
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
